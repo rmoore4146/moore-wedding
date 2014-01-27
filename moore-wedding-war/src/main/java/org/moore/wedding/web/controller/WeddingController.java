@@ -17,8 +17,23 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class WeddingController {
 
-    @RequestMapping(value = "/wedding", method = RequestMethod.GET)
-    public String getWedding(ModelMap map, HttpServletRequest request) {
-        return "wedding";
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public String getHomePage(ModelMap map, HttpServletRequest request) {
+        return "home";
+    }
+
+    @RequestMapping(value = "/about", method = RequestMethod.GET)
+    public String getAboutPage(ModelMap map,  HttpServletRequest request) {
+        return "about";
+    }
+
+    @RequestMapping(value = "/contact", method = RequestMethod.GET)
+    public String getContactPage(ModelMap map, HttpServletRequest request) {
+        return "contact";
+    }
+
+    @RequestMapping(value = "/links", method = RequestMethod.GET)
+    public String getLinksPage(ModelMap map, HttpServletRequest request) {
+        return "links";
     }
 }

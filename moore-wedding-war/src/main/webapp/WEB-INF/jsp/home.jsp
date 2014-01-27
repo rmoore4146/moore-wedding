@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="item">
-            <img src="${contextPath}/site/img/courtnme.png" alt="">
+            <img src="${contextPath}/site/img/baby_punch.jpg" alt="">
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Another example headline.</h1>
