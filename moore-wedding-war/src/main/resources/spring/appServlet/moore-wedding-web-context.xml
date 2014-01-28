@@ -19,8 +19,12 @@
     -->
     <context:component-scan base-package="org.moore.wedding.web.controller"/>
 
-    <!-- Import beans here -->
-    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"
-          p:basenames="site-messages" />
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>WEB-INF/site-message</value>
+            </list>
+        </property>
+    </bean>
 
 </beans>

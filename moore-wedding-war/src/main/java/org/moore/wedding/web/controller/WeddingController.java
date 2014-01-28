@@ -36,4 +36,9 @@ public class WeddingController {
     public String getLinksPage(ModelMap map, HttpServletRequest request) {
         return "links";
     }
+
+    @RequestMapping(value = "/location", method = RequestMethod.GET)
+    public String getLocation(ModelMap map, HttpServletRequest request) {
+        return "location";
+    }
 }
