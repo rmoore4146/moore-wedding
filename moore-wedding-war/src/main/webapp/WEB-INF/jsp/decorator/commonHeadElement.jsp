@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link type="text/css" href="${contextPath}/site/css/bootstrap/bootstrap.min.css" rel="Stylesheet" />
+    <link type="text/css" href="${contextPath}/site/css/bootstrap/bootstrap.css" rel="Stylesheet" />
     <%--<link type="text/css" href="${contextPath}/site/css/bootstrap/bootstrap-theme.min.css" rel="Stylesheet" />--%>
     <link type="text/css" href="${contextPath}/site/css/footer.css" rel="Stylesheet" />
 

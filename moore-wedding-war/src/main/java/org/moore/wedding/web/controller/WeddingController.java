@@ -1,5 +1,8 @@
 package org.moore.wedding.web.controller;
 
+import org.apache.log4j.Logger;
+import org.springframework.mobile.device.Device;
+import org.springframework.mobile.device.DeviceUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,8 +20,16 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class WeddingController {
 
+//    Logger logger = Logger.getLogger(WeddingController.class);
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String getNakedURLRedirectPage(ModelMap map, HttpServletRequest request) {
+        return "forward:/home";
+    }
+
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String getHomePage(ModelMap map, HttpServletRequest request) {
+        addMobileFlagToModel(map, request);
         return "home";
     }
 
@@ -39,6 +50,12 @@ public class WeddingController {
 
     @RequestMapping(value = "/location", method = RequestMethod.GET)
     public String getLocation(ModelMap map, HttpServletRequest request) {
+        addMobileFlagToModel(map, request);
         return "location";
+    }
+
+    private void addMobileFlagToModel(ModelMap map, HttpServletRequest request) {
+        Device currentDevice = DeviceUtils.getCurrentDevice(request);
+        map.addAttribute("isMobile", currentDevice.isMobile());
     }
 }

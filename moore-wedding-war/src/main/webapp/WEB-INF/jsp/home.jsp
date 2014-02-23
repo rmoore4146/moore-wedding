@@ -13,40 +13,58 @@
             <%@include file="decorator/header.jsp"%>
 
             <div class="container">
-
+                <c:if test="${not isMobile}">
+                <div class="jumbotron">
+                </c:if>
                 <!-- Carousel
                 ================================================== -->
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <c:set var="height" value="500"/>
+                <c:if test="${isMobile}">
+                    <c:set var="height" value="300"/>
+                </c:if>
+
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" <c:if test="${isMobile}">style="width: 300px; height:300px;"</c:if> >
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
                     </ol>
                     <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="${contextPath}/site/img/nashanic_0091.jpg" alt="">
+                        <div class="item active" <c:if test="${isMobile}">style="width: 300px; height:300px;"</c:if> >
+                            <img src="${contextPath}/site/img/courtneyryan_collage.jpg" alt="" <c:if test="${isMobile}">style="width: 300px; height:300px;"</c:if>  >
                             <div class="container">
-                                <div class="carousel-caption">
-                                    <h1>Welcome!</h1>
-                                    <p>Thanks for visiting our wedding website. Please explore and find some information about our special day.</p>
-                                    <%--<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>--%>
-                                </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <img src="${contextPath}/site/img/baby_punch.jpg" alt="">
+                        <div class="item" <c:if test="${isMobile}">style="width: 300px; height:300px;"</c:if>  >
+                            <img src="${contextPath}/site/img/1170817_710724761739_1767995957_n.jpg" alt="" <c:if test="${isMobile}">style="width: 300px; height:300px;"</c:if> >
                             <div class="container">
-                                <div class="carousel-caption">
-                                    <h1>Another example headline.</h1>
-                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                                </div>
+                            </div>
+                        </div>
+                        <div class="item" <c:if test="${isMobile}">style="width: 300px; height:300px;"</c:if>  >
+                            <img src="${contextPath}/site/img/neshanic_valley_1.jpg" alt="" <c:if test="${isMobile}">style="width: 300px; height:300px;"</c:if> >
+                            <div class="container">
+                            </div>
+                        </div>
+                        <div class="item" <c:if test="${isMobile}">style="width: 300px; height:300px;"</c:if> >
+                            <img src="${contextPath}/site/img/snoop_collage.jpg" alt="" <c:if test="${isMobile}">style="width: 300px; height:300px;"</c:if> >
+                            <div class="container">
                             </div>
                         </div>
                     </div>
                     <a class="left carousel-control" href="#myCarousel" data-slide="prev"></a>
                     <a class="right carousel-control" href="#myCarousel" data-slide="next"></a>
                 </div><!-- /.carousel -->
+                <c:if test="${not isMobile}">
+                </div>
+                </c:if>
+            </div>
+            <div class="container">
+                <div class="jumbotron">
+                    <h2>Welcome...</h2>
+                    <p>Thanks for visiting our wedding website. Please explore and find some information about our special day.</p>
+                </div>
             </div>
         </div>
         <%@include file="decorator/footer.jsp"%>

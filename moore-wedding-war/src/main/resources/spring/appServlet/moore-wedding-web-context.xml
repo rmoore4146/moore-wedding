@@ -12,6 +12,11 @@
                            http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <mvc:annotation-driven/>
+
+    <mvc:interceptors>
+        <!-- On pre-handle, resolve the device that originated the web request -->
+        <bean class="org.springframework.mobile.device.DeviceResolverHandlerInterceptor" />
+    </mvc:interceptors>
     <!--
           Setup spring to pull in @Controller, @RequestMapping, etc Configuration scans specified packages
           for classes configured as Spring managed beans and automatically sets up objects annotated with

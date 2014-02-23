@@ -14,8 +14,11 @@
 
         <div class="container">
             <div class="jumbotron">
-                <h1>About us...</h1>
-                <p>Some sweet things about us goes here. I should probably say something about liking Courtney. Don't wanna lie though.</p>
+                <h1>About...</h1>
+                <p>Courtney and Ryan started dating 10 years ago. 10! 1-0. They immediately fell madly in love and have been driving each other crazy ever since. Kidding! (maybe)..</p>
+                <p>Their journey started when they met in high school. College took them to <a href="http://www.cofc.edu" target="_blank">Charleston</a> - where they've been ever since. Courtney is currently a grad student @ <a href="http://www.citadel.edu" target="_blank">The Citadel</a>. Ryan is a software developer at a local <a href="http://www.sparcedge.com" target="_blank">dev shop</a>.</p>
+                <p>10 years, 6 apartments, 5 colleges, 2 cats, 2 roommates, a bunny and a dog later.... it's time to tie the knot. Yes, Tom - that means we're kicking you out.</p>
+                <p>We hope you can all come help us celebrate our big day.</p>
             </div>
         </div>
     </div>

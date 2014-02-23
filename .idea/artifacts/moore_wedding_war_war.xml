@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="moore-wedding-war:war">
+    <output-path>$PROJECT_DIR$/moore-wedding-war/target</output-path>
+    <root id="archive" name="moore-wedding-war-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="moore-wedding-war:war exploded" />
+    </root>
+  </artifact>
+</component>
